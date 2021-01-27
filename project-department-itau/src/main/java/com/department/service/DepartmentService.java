@@ -59,12 +59,5 @@ public class DepartmentService {
 		
 		departmentRepository.delete(departmentEntity);
 	}
-	
-	public Page<DepartmentEntity> resumir(Pageable pageable) {
-		
-		List<DepartmentEntity> departs = departmentRepository.findAll();
-		Long a = 10L;
-		return new PageImpl<>(departs);
-	}
 
 }
