@@ -2,8 +2,6 @@ package com.department;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.springframework.data.domain.Pageable;
-
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,21 +9,20 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.department.model.DepartmentEntity;
 import com.department.repository.DepartmentRepository;
 import com.department.repository.filter.DepartmentFilter;
-import com.department.repository.projection.DepartmentResume;
 import com.department.service.DepartmentService;
 
 @SpringBootTest
 class ProjectDepartmentItauApplicationTests {
-	
+
 	@Autowired
 	private DepartmentService departmentService;
 	
 	@Autowired
 	private DepartmentRepository departmentRepository;
-	
-	private DepartmentEntity departmentEntity = new DepartmentEntity();
-	
+		
 	private DepartmentFilter departmentFilter = new DepartmentFilter();
+	
+	DepartmentEntity departmentEntity = new DepartmentEntity();
 	
 	@Test
     public void saveDepartmentSucess() {
